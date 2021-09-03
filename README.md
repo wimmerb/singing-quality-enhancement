@@ -27,13 +27,15 @@ conda env create -f environment.yaml
 # Activate conda environment
 conda activate SING_QUAL_EN
 ```
-# Denoising
-## Data Augmentation
-## Models
-# Leakage Removal
-## Data Augmentation
-## Models
 
-# Dataset Handling
-## Preprocessing Scripts
-## Laptop noises from Freesound
+# Training
+## Dataset Handling
+### Preprocessing Scripts
+### Laptop noises from Freesound
+## Denoising
+### Data Augmentation
+### Validation 
+
+## Leakage Removal
+### Data Augmentation
+### Validation 
