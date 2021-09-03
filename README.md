@@ -43,7 +43,7 @@ These file lists are then dynamically combined during training (the *training* s
 
 
 # Training
-For detailed information on the training process, please refer to the "Methods for ..." chapters in [this thesis document](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-recordings.pdf). Before starting the training process, please make sure that you have properly preprocessed source datasets and properly precomputed validation (and optionally testing) datasets.
+For detailed information on the training process, please refer to the "Methods for ..." chapters in [this thesis document](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-recordings.pdf). Before starting the training process, please make sure that you have the specified file path lists and properly precomputed validation (and optionally testing) datasets at hand.
 ## Denoising
 ### Training
 ### Evaluation
