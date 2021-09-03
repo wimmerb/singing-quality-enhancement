@@ -1,4 +1,4 @@
-# Quality Enhancement of Singing Voice Recordings
+# Quality Enhancement of Overdub Singing Voice Recordings
 This page is currently under construction.
 
 # Abstract
