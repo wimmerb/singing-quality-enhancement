@@ -1,4 +1,4 @@
-name: FullSubNet
+name: SING_QUAL_EN
 channels:
   - pytorch
   - conda-forge
