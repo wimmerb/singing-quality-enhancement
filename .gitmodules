@@ -2,7 +2,7 @@
 	path = Wave-U-Net-for-Speech-Enhancement
 	url = https://github.com/wimmerb/Wave-U-Net-for-Speech-Enhancement
 [submodule "FullSubNet"]
-	path = FullSubNet
+	path = SpeechEnhancers
 	url = https://github.com/wimmerb/FullSubNet
 [submodule "Datasets/02_monoaural_raw/laptop_noise_freesound"]
 	path = Datasets/02_monoaural_raw/laptop_noise_freesound
