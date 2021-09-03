@@ -12,7 +12,10 @@ Evaluation results show its overall efficacy on leakage removal as well as signi
 # Results
 To get a first impression, please have a listen to these [examples](https://wimmerb.github.io/singing-quality-enhancement/)
 
+# Dependencies
+`conda env create -f environment.yaml`
 
+`conda activate SING_QUAL_EN`
 # Denoising
 ## Data Augmentation
 ## Models
