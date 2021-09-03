@@ -1,6 +1,8 @@
 # Quality Enhancement of Overdub Singing Voice Recordings
 [Audio Examples](https://wimmerb.github.io/singing-quality-enhancement/)
 
+[Thesis](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-recordings.pdf)
+
 This page is currently under construction.
 
 # Abstract
@@ -15,7 +17,7 @@ Evaluation results show its overall efficacy on leakage removal as well as signi
 ## Audio examples
 To get a first impression, please have a listen to these [examples](https://wimmerb.github.io/singing-quality-enhancement/)
 ## Pretrained Models
-You can find pretrained models in the **Experiments** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
+You can find pretrained models in the **[Experiments](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Experiments)** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
 
 # Dependencies
 Please use the following instructions (conda installation required):
@@ -29,7 +31,7 @@ conda activate SING_QUAL_EN
 ```
 
 # Dataset Handling
-**Please have a look at the Datasets folder for preprocessing code and further information. A list of usefuul datasets is linked aswell.**
+**Please have a look at the [Datasets](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Datasets) folder for preprocessing code and further information. A list of usefuul datasets is linked aswell.**
 
 Note that, generally, raw audio file sources are handled via text files. These files contain lists with individual file paths. They are given to the training script and dynamically applied or used for precomputing datasets for validation and testing.
 ## Preprocessing Scripts
@@ -41,12 +43,15 @@ These file lists are then dynamically combined during training (the *training* s
 
 
 # Training
-
-
+For detailed information on the training process, please refer to the "Methods for ..." chapters in [this thesis document](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-recordings.pdf). Before starting the training process, please make sure that you have properly preprocessed source datasets and properly precomputed validation (and optionally testing) datasets.
 ## Denoising
-### Data Augmentation
-### Validation 
+### Training
+### Evaluation
+
 
 ## Leakage Removal
-### Data Augmentation
-### Validation 
+### Training
+### Evaluation.
+
+# Inference
+You can find pretrained models in the **[Experiments](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Experiments)** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
