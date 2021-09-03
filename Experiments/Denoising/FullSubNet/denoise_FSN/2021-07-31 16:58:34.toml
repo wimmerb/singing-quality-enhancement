@@ -1,0 +1,106 @@
+[meta]
+save_dir = "~/Experiments/FullSubNet/Denoise_NEW"
+description = "denoise with correct augmentation."
+seed = 0
+keep_reproducibility = false
+use_amp = false
+experiment_name = "denoise_FSN"
+config_path = "fullsubnet/denoise_FSN.toml"
+
+[acoustics]
+n_fft = 512
+win_length = 512
+sr = 16000
+hop_length = 256
+
+[optimizer]
+lr = 0.001
+beta1 = 0.9
+beta2 = 0.999
+
+[model]
+path = "fullsubnet.model.Model"
+
+[trainer]
+path = "fullsubnet.trainer.Trainer"
+
+[loss_function]
+name = "mse_loss"
+
+[train_dataset]
+path = "audio_zen.dataset.dynamic_dataset.Dataset"
+
+[validation_dataset]
+path = "audio_zen.dataset.parallel_dataset.Dataset"
+
+[model.args]
+sb_num_neighbors = 15
+fb_num_neighbors = 0
+num_freqs = 257
+look_ahead = 2
+sequence_model = "LSTM"
+fb_output_activate_function = "ReLU"
+sb_output_activate_function = false
+fb_model_hidden_size = 512
+sb_model_hidden_size = 384
+weight_init = false
+norm_type = "offline_laplace_norm"
+num_groups_in_drop_band = 2
+
+[trainer.train]
+clip_grad_norm_value = 10
+epochs = 9999
+save_checkpoint_interval = 1
+
+[trainer.validation]
+save_max_metric_score = true
+validation_interval = 1
+
+[trainer.visualization]
+metrics = [ "WB_PESQ", "NB_PESQ", "STOI", "SI_SDR",]
+n_samples = 1
+num_workers = 12
+
+[loss_function.args]
+
+[train_dataset.args]
+clean_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/clean_TRAIN.txt"
+clean_dataset_limit = false
+clean_dataset_offset = 0
+noise_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/noise_TRAIN.txt"
+noise_dataset_limit = false
+noise_dataset_offset = 0
+rir_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/rir_TRAIN.txt"
+rir_dataset_limit = false
+rir_dataset_offset = 0
+num_workers = 12
+pre_load_clean_dataset = false
+pre_load_noise = false
+pre_load_rir = false
+reverb_proportion = 0.75
+pass_proportion = 0.05
+silent_target_proportion = 0.01
+pitch_shift_proportion = 0.25
+pitch_shift_range = [ -800, 800,]
+silence_length = 0.1
+snr_range = [ -3, 25,]
+sr = 16000
+sub_sample_length = 3.072
+target_dB_FS = -25
+target_dB_FS_floating_value = 10
+buffer_size = 10
+buffer_use_only_identity = false
+target_task = "denoise"
+debug_dump_limit = 10
+
+[train_dataset.dataloader]
+batch_size = 16
+num_workers = 1
+drop_last = true
+pin_memory = true
+shuffle = true
+
+[validation_dataset.args]
+dataset_dir_list = [ "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/VALIDATION_SET_TRY2",]
+sr = 16000
+limit = 400

@@ -1,0 +1,130 @@
+seed = 0
+description = "...des"
+root_dir = "/home/benedikt/Experiments/Wave-U-Net/Denoise_21_08_16"
+cudnn_deterministic = false
+experiment_name = "train"
+config_path = "config/train/train.toml"
+
+[trainer]
+path = "trainer.trainer.Trainer"
+epochs = 1200
+save_checkpoint_interval = 5
+
+[model]
+path = "model.unet_basic.Model"
+
+[loss_function]
+module = "model.loss"
+main = "mse_loss"
+
+[optimizer]
+lr = 1e-5
+beta1 = 0.9
+beta2 = 0.999
+
+[train_dataset]
+path = "audio_zen.dataset.dynamic_dataset.Dataset"
+
+[validation_dataset]
+path = "audio_zen.dataset.parallel_dataset.Dataset"
+
+[train_v_dataset]
+path = "audio_zen.dataset.dynamic_dataset.Dataset"
+
+[trainer.validation]
+interval = 1
+find_max = true
+
+[model.args]
+
+[loss_function.args]
+
+[train_dataset.args]
+clean_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/clean_TRAIN.txt"
+clean_dataset_limit = false
+clean_dataset_offset = 0
+noise_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/noise_TRAIN.txt"
+noise_dataset_limit = false
+noise_dataset_offset = 0
+rir_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/rir_TRAIN.txt"
+rir_dataset_limit = false
+rir_dataset_offset = 0
+num_workers = 12
+pre_load_clean_dataset = false
+pre_load_noise = false
+pre_load_rir = false
+reverb_proportion = 0.75
+pass_proportion = 0.02
+silent_target_proportion = 0.02
+pitch_shift_proportion = 0.25
+pitch_shift_range = [ -800, 800,]
+silence_length = 0.2
+snr_range = [ -3, 25,]
+sr = 16000
+sub_sample_length = 3.072
+target_dB_FS = -25
+target_dB_FS_floating_value = 10
+buffer_size = 10
+buffer_use_only_identity = false
+target_task = "denoise"
+sample_for_wave_u_net = true
+sample_length = 16384
+debug_dump_limit = 2
+
+[train_dataset.dataloader]
+batch_size = 16
+num_workers = 1
+drop_last = true
+pin_memory = true
+shuffle = true
+
+[validation_dataset.args]
+dataset_dir_list = [ "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/TEST_SET",]
+sr = 16000
+limit = 400
+sub_sample_length = 3.0
+sample_for_wave_u_net = true
+
+[train_v_dataset.args]
+clean_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/clean_VALIDATION.txt"
+clean_dataset_limit = false
+clean_dataset_offset = 0
+noise_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/noise_VALIDATION.txt"
+noise_dataset_limit = false
+noise_dataset_offset = 0
+rir_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/rir_VALIDATION.txt"
+rir_dataset_limit = false
+rir_dataset_offset = 0
+num_workers = 12
+pre_load_clean_dataset = false
+pre_load_noise = false
+pre_load_rir = false
+reverb_proportion = 0.75
+pass_proportion = 0.02
+silent_target_proportion = 0.02
+pitch_shift_proportion = 0.25
+pitch_shift_range = [ -800, 800,]
+silence_length = 0.2
+snr_range = [ -3, 25,]
+sr = 16000
+sub_sample_length = 3.072
+target_dB_FS = -25
+target_dB_FS_floating_value = 10
+buffer_size = 10
+buffer_use_only_identity = false
+target_task = "denoise"
+sample_for_wave_u_net = true
+sample_length = 16384
+
+[train_v_dataset.dataloader]
+batch_size = 1
+num_workers = 1
+drop_last = true
+pin_memory = true
+shuffle = true
+
+[trainer.validation.custom]
+visualize_audio_limit = 20
+visualize_waveform_limit = 20
+visualize_spectrogram_limit = 20
+sample_length = 16384
