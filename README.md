@@ -10,12 +10,21 @@ The proposed architecture performs leakage removal by taking the signal leading 
 Evaluation results show its overall efficacy on leakage removal as well as significant benefits introduced by usage of the additional input.
 
 # Results
+## Audio examples
 To get a first impression, please have a listen to these [examples](https://wimmerb.github.io/singing-quality-enhancement/)
+## Pretrained Models
+You can find pretrained models in the **Experiments** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
 
 # Dependencies
-`conda env create -f environment.yaml`
+Please use the following instructions (conda installation required):
 
-`conda activate SING_QUAL_EN`
+```bash
+# Install conda environment and python packages
+conda env create -f environment.yaml
+
+# Activate conda environment
+conda activate SING_QUAL_EN
+```
 # Denoising
 ## Data Augmentation
 ## Models
@@ -23,6 +32,6 @@ To get a first impression, please have a listen to these [examples](https://wimm
 ## Data Augmentation
 ## Models
 
-#Dataset Handling
-##Preprocessing Scripts
-##Laptop noises from Freesound
+# Dataset Handling
+## Preprocessing Scripts
+## Laptop noises from Freesound
