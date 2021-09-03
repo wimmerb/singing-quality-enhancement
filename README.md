@@ -46,7 +46,24 @@ These file lists are then dynamically combined during training (the *training* s
 For detailed information on the training process, please refer to the "Methods for ..." chapters in [this thesis document](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-recordings.pdf). Before starting the training process, please make sure that you have the specified file path lists and properly precomputed validation (and optionally testing) datasets at hand.
 ## Denoising
 ### Training
+```bash
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn 
+
+# Start training
+python train.py -C denoise_fsn/train.toml -N 1
+# OR resume training
+python train.py -C denoise_fsn/train.toml -R -N 1
+```
+
 ### Evaluation
+```bash
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn
+
+# Evaluate the best model (Same as resuming and running validation only)
+python train.py -C denoise_fsn/train.toml -R -V -N 1
+```
 
 
 ## Leakage Removal
