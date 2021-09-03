@@ -28,10 +28,21 @@ conda env create -f environment.yaml
 conda activate SING_QUAL_EN
 ```
 
+# Dataset Handling
+**Please have a look at the Datasets folder for preprocessing code and further information. A list of usefuul datasets is linked aswell.**
+
+Note that, generally, raw audio file sources are handled via text files. These files contain lists with individual file paths. They are given to the training script and dynamically applied or used for precomputing datasets for validation and testing.
+## Preprocessing Scripts
+To prepare the training data, a processing pipeline with multiple steps is applied. In this pipeline, desired subsets of datasets are selected, segmented/balanced and combined to audio file path lists. For example, a result of the pipeline could be three text files for noise profiles (*training/validation/testing*) and three text files for voice recordings (same split). 
+
+These file lists are then dynamically combined during training (the *training* split) or for precomputing static datasets for comparable validation and testing (the *validation/testing* splits).
+
+
+
+
 # Training
-## Dataset Handling
-### Preprocessing Scripts
-### Laptop noises from Freesound
+
+
 ## Denoising
 ### Data Augmentation
 ### Validation 
