@@ -1,0 +1,49 @@
+[meta]
+save_dir = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DEREVERBERATION_21_06_27/TEST_SET"
+description = "See creator_setting.toml"
+seed = 0  # set random seed for random, numpy, pytorch-gpu and pytorch-cpu
+file_limit = 200
+
+[dataset]
+path = "audio_zen.dataset.dynamic_dataset.Dataset"
+[dataset.args]
+clean_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/clean_TEST.txt"
+clean_dataset_limit = false
+clean_dataset_offset = 0
+
+noise_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/noise_TEST.txt"
+noise_dataset_limit = false
+noise_dataset_offset = 0
+
+rir_dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/DENOISING_21_06_24/data_source_paths/rir_TEST.txt"
+rir_dataset_limit = false
+rir_dataset_offset = 0
+
+num_workers = 12
+
+pre_load_clean_dataset = false
+pre_load_noise = false
+pre_load_rir = false
+
+reverb_proportion = 0.95
+pass_proportion = 0.01
+silent_target_proportion = 0.01
+pitch_shift_proportion = 0.1
+pitch_shift_range = [-800, 800]
+
+silence_length = 0.2
+snr_range = [-3, 25]
+sr = 16000
+target_dB_FS = -25
+target_dB_FS_floating_value = 10
+
+buffer_size = 10
+buffer_use_only_identity = true #for unique samples, needed for test/validation set creation, much faster if training without
+target_task = "dereverb"
+
+sub_sample_length = 4.072
+
+# sample_for_wave_u_net = true
+# sample_length = 16384
+
+# debug_dump_limit = 10

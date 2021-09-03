@@ -1,0 +1,35 @@
+[meta]
+save_dir = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/LEAKAGE_REMOVAL/LEAKAGE_REMOVAL_2021_7_15/TEST_ALIGNED_SNRS/SNR_20"
+description = "See creator_setting.toml"
+seed = 0  # set random seed for random, numpy, pytorch-gpu and pytorch-cpu
+file_limit = 48
+nr_data_cycles = 4 #normally just 1...
+
+[dataset]
+path = "audio_zen.dataset.dynamic_BGM_dataset.Dataset"
+[dataset.args]
+file_list_fn = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/LEAKAGE_REMOVAL/LEAKAGE_REMOVAL_2021_7_15/data_splitting_2/test_file_paths.txt"
+rir_list_fn = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/LEAKAGE_REMOVAL/LEAKAGE_REMOVAL_2021_7_15/data_splitting_2/rir_TEST.txt"
+mir_list_fn = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/LEAKAGE_REMOVAL/LEAKAGE_REMOVAL_2021_7_15/data_splitting_2/mir_TEST.txt"
+nr_aug_variations = 5
+mir_apply_cnt_list = [0,1,2]
+rir_apply_cnt_list = [0,1,1]
+# mir_apply_cnt_list = [0]
+# rir_apply_cnt_list = [0]
+sr = 16000
+sub_sample_length = 10.00
+max_audio_length = 80
+aligned_prob = 1.0
+include_lead_in_accomp_prob = 0.2
+sample_for_validation_or_test_creation = true
+nr_samples_per_voice_v_augmentation_combination = 1
+snr_range = [20, 20]
+target_dB_FS = -25
+target_dB_FS_floating_value = 10
+
+grvp_max_n_tries_foreground = 20
+grvp_max_n_tries_background = 1 #doesn't matter
+
+dry_run=false
+
+

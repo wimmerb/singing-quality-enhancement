@@ -1,3 +1,9 @@
 [submodule "audio_zen"]
 	path = audio_zen
 	url = https://github.com/wimmerb/audio_zen
+[submodule "Wave-U-Net-for-Speech-Enhancement"]
+	path = Wave-U-Net-for-Speech-Enhancement
+	url = https://github.com/wimmerb/Wave-U-Net-for-Speech-Enhancement
+[submodule "FullSubNet"]
+	path = FullSubNet
+	url = https://github.com/wimmerb/FullSubNet
