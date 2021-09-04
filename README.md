@@ -119,9 +119,14 @@ You can find pretrained models in the **[Experiments](https://github.com/wimmerb
 
 Example usage:
 
-```
+```bash
 # Go to directory for architecture-specific processing (inside recipes folder)
 cd SpeechEnhancers/recipes/thesis_experiments_fsn 
 
 # Enhance with given model and output paths
-python inference.py -C denoise_fsn/inference.toml -M ../../../Experiments/Denoising/FullSubNet/denoise_FSN/checkpoints/best_model.tar -O ../../../Experiments/Denoising/FullSubNet/denoise_FSN/inference
+python inference.py -C \ 
+denoise_fsn/inference.toml -M \ 
+../../../Experiments/Denoising/FullSubNet/denoise_FSN/checkpoints/best_model.tar \ 
+-O ../../../Experiments/Denoising/FullSubNet/denoise_FSN/inference \;
+
+# Abstract
