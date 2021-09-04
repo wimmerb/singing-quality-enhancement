@@ -20,7 +20,29 @@ To get a first impression, please have a listen to these [examples](https://wimm
 You can find pretrained models in the **[Experiments](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Experiments)** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
 
 # Prerequisites
-For the right dependencies, please use the following instructions (conda installation required):
+
+## Submodule initialization
+Please use the following instructions:
+```bash
+# Initialize all submodules
+git submodule update --init --recursive
+
+# Change branch to stay up-to-date
+cd SpeechEnhancers && git checkout main
+cd audio_zen && git checkout main
+```
+
+```bash
+# Do not forget to pull from time to time
+git pull --recurse-submodules
+
+# OR (pulls only submodules)
+git submodule update --remote
+```
+
+## Environment
+
+Please use the following instructions (conda installation required):
 
 ```bash
 # Install conda environment and python packages
