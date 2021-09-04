@@ -19,8 +19,8 @@ To get a first impression, please have a listen to these [examples](https://wimm
 ## Pretrained Models
 You can find pretrained models in the **[Experiments](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Experiments)** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
 
-# Dependencies
-Please use the following instructions (conda installation required):
+# Prerequisites
+For the right dependencies, please use the following instructions (conda installation required):
 
 ```bash
 # Install conda environment and python packages
@@ -68,7 +68,23 @@ python train.py -C denoise_fsn/train.toml -R -V -N 1
 
 ## Leakage Removal
 ### Training
+```bash
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn 
+
+# Start training
+python train.py -C leakage_removal/fullsubnet_aec/train_BGM_full_dual.toml -N 1
+# OR resume training
+python train.py -C leakage_removal/fullsubnet_aec/train_BGM_full_dual.toml -R -N 1
+```
 ### Evaluation.
+```bash
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn
+
+# Evaluate the best model (Same as resuming and running validation only)
+python train.py -C leakage_removal/fullsubnet_aec/train_BGM_full_dual.toml -R -V -N 1
+```
 
 # Inference
 You can find pretrained models in the **[Experiments](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Experiments)** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
