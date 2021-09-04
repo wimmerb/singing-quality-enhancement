@@ -68,6 +68,9 @@ python train.py -C denoise_fsn/train.toml -R -V -N 1
 
 ## Leakage Removal
 ### Training
+
+Example:
+
 ```bash
 # Go to directory for architecture-specific processing (inside recipes folder)
 cd SpeechEnhancers/recipes/thesis_experiments_fsn 
@@ -77,7 +80,10 @@ python train.py -C leakage_removal/fullsubnet_aec/train_BGM_full_dual.toml -N 1
 # OR resume training
 python train.py -C leakage_removal/fullsubnet_aec/train_BGM_full_dual.toml -R -N 1
 ```
-### Evaluation.
+### Evaluation
+
+Example:
+
 ```bash
 # Go to directory for architecture-specific processing (inside recipes folder)
 cd SpeechEnhancers/recipes/thesis_experiments_fsn
@@ -88,3 +94,12 @@ python train.py -C leakage_removal/fullsubnet_aec/train_BGM_full_dual.toml -R -V
 
 # Inference
 You can find pretrained models in the **[Experiments](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Experiments)** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
+
+Example usage:
+
+```
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn 
+
+# Enhance with given model and output paths
+python inference.py -C denoise_fsn/inference.toml -M ../../../Experiments/Denoising/FullSubNet/denoise_FSN/checkpoints/best_model.tar -O ../../../Experiments/Denoising/FullSubNet/denoise_FSN/inference
