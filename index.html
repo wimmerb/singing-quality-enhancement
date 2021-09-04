@@ -19,9 +19,10 @@
   <div><b>Supervisors:</b> Merlijn Blaauw, Jordi Janer
   </div>
 
-  <a href="https://github.com/wimmerb/singing-quality-enhancement">Code: https://github.com/wimmerb/singing-quality-enhancement</a>
+  <a href="https://github.com/wimmerb/singing-quality-enhancement">Code+Thesis: https://github.com/wimmerb/singing-quality-enhancement</a>
   <hr style="height:1px;border:none;border-top:1px solid #555555; width:130%">
-  <h2>Part1: Denoising (on <a href="https://zenodo.org/record/1193957#.YQgBsi2w1hE">VocalSet</a>)</h2>
+  <h2>Part 1: Denoising (on <a href="https://zenodo.org/record/1193957#.YQgBsi2w1hE">VocalSet</a>)</h2>
+  <div>Denoising of artificially augmented singing voice recordings. FullSubNet and Wave-U-Net predictions in reference to noisy and noise-free (clean) versions of the same sample.</div><br/>
 
   <style type="text/css">
     .tg {
@@ -78,7 +79,7 @@
     .tg .tg-ihkz {
       border-color: inherit;
       text-align: center;
-      vertical-align: top
+      vertical-align: top;
     }
 
     .tg .tg-7kms {
@@ -88,10 +89,15 @@
       text-align: center;
       vertical-align: top
     }
+
+    #player {
+      width: 95%
+    }​
+
   </style>
   <table class="tg" style="undefined;table-layout: fixed; width: 493px">
     <colgroup>
-      <col style="width: 85px">
+      <col style="width: 120px">
       <col style="width: 300px">
       <col style="width: 300px">
       <col style="width: 300px">
@@ -113,62 +119,62 @@
     <tbody>
       <tr>
         <td class="tg-0pky">Noisy</td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/NOISY/f1_caro_straight_NOISE_257259_4286987-hq_c0.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/NOISY/f1_caro_vibrato_NOISE_ch14.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/NOISY/m1_dona_straight_NOISE_502455_9289659-hq_c1.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/NOISY/m3_row_spoken_NOISE_ch06.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/NOISY/m6_caro_straight_NOISE_EM32_403a_1_Noise_Fan_c19.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/NOISY/m7_caro_straight_NOISE_ch07.wav"></audio></td>
       </tr>
       <tr>
-        <td class="tg-0pky">FullSubNet</td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-0pky"><b>FullSubNet</b></td>
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/FSN_NEW/f1_caro_straight_NOISE_257259_4286987-hq_c0.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/FSN_NEW/f1_caro_vibrato_NOISE_ch14.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/FSN_NEW/m1_dona_straight_NOISE_502455_9289659-hq_c1.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/FSN_NEW/m3_row_spoken_NOISE_ch06.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/FSN_NEW/m6_caro_straight_NOISE_EM32_403a_1_Noise_Fan_c19.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/FSN_NEW/m7_caro_straight_NOISE_ch07.wav"></audio></td>
       </tr>
       <tr>
-        <td class="tg-0pky">Wave-U-Net</td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-0pky"><b>Wave-U-Net</b></td>
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/WUNet/f1_caro_straight_NOISE_257259_4286987-hq_c0.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/WUNet/f1_caro_vibrato_NOISE_ch14.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/WUNet/m1_dona_straight_NOISE_502455_9289659-hq_c1.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/WUNet/m3_row_spoken_NOISE_ch06.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/WUNet/m6_caro_straight_NOISE_EM32_403a_1_Noise_Fan_c19.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/WUNet/m7_caro_straight_NOISE_ch07.wav"></audio></td>
       </tr>
       <tr>
         <td class="tg-0pky">Clean</td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/CLEAN/f1_caro_straight_NOISE_257259_4286987-hq_c0.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/CLEAN/f1_caro_vibrato_NOISE_ch14.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/CLEAN/m1_dona_straight_NOISE_502455_9289659-hq_c1.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/CLEAN/m3_row_spoken_NOISE_ch06.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/CLEAN/m6_caro_straight_NOISE_EM32_403a_1_Noise_Fan_c19.wav"></audio></td>
-        <td class="tg-ihkz"><audio controls="">
+        <td class="tg-ihkz"><audio id="player" controls="">
             <source src="samples/DENOISE_PARALLEL/CLEAN/m7_caro_straight_NOISE_ch07.wav"></audio></td>
       </tr>
       
@@ -176,12 +182,13 @@
   </table>
 
     <hr style="height:1px;border:none;border-top:1px solid #555555; width:130%">
-    <h2>Part2: Leakage Removal/Echo Cancellation (audio samples are copyrighted by the <a href="https://www.upf.edu/web/mtg">MTG-UPF</a>)</h2>
+    <h2>Part 2: Leakage Removal/Echo Cancellation (audio samples are copyrighted by the <a href="https://www.upf.edu/web/mtg">MTG-UPF</a>)</h2>
+    <div>Leakage removal on artificially augmented choir multi-track recordings. Sound leakage is also known as spill or cross-talk. It occurs, when reference audio for overdubbing becomes audible in the background of a recording. In our <a href="https://cantamus.app">choir rehearsal software</a> use case, the reference audio consists mainly of choir voices and/or orchestral instruments, to which the users can practice and record their (vocal) excerpts. The proposed modified FullSubNet architecture processes mixture and reference audio to remove leakage. The standard FullSubNet baseline model ignores any knowledge about reference audio.</div><br/>
     
     </div>
     <table class="tg" style="undefined;table-layout: fixed; width: 493px">
         <colgroup>
-          <col style="width: 85px">
+          <col style="width: 120px">
           <col style="width: 300px">
           <col style="width: 300px">
           <col style="width: 300px">
@@ -202,78 +209,78 @@
         </thead>
         <tbody>
           <tr>
-            <td class="tg-0pky">Noisy <br/>(Input 1)</td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-0pky">Noisy/Mixture<br/>(Input 1)</td>
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/NOISY/00008__Cantoría__Teresica Hermana__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/NOISY/00013__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/NOISY/00016__Cantoría__Oy Comamos Y Bebamos__soprano.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/NOISY/00019__Cantoría__Oy Comamos Y Bebamos__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/NOISY/00020__Cantoría__Teresica Hermana__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/NOISY/00025__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
           </tr>
           <tr>
-            <td class="tg-0pky">FSN Baseline</td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-0pky"><b>FullSubNet</b><br/>Baseline model<br/>(In: 1)</td>
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BASELINE_NO_HINT/TEST_SET_FOR_HUMAN_ALIGNED00008__Cantoría__Teresica Hermana__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BASELINE_NO_HINT/TEST_SET_FOR_HUMAN_ALIGNED00013__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BASELINE_NO_HINT/TEST_SET_FOR_HUMAN_ALIGNED00016__Cantoría__Oy Comamos Y Bebamos__soprano.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BASELINE_NO_HINT/TEST_SET_FOR_HUMAN_ALIGNED00019__Cantoría__Oy Comamos Y Bebamos__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BASELINE_NO_HINT/TEST_SET_FOR_HUMAN_ALIGNED00020__Cantoría__Teresica Hermana__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BASELINE_NO_HINT/TEST_SET_FOR_HUMAN_ALIGNED00025__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
           </tr>
           <tr>
             <td class="tg-0pky">Far-End <br/>(Input 2)</td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BGM/00008__Cantoría__Teresica Hermana__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BGM/00013__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BGM/00016__Cantoría__Oy Comamos Y Bebamos__soprano.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BGM/00019__Cantoría__Oy Comamos Y Bebamos__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BGM/00020__Cantoría__Teresica Hermana__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/BGM/00025__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
           </tr>
           <tr>
-            <td class="tg-0pky">FSN-aec</td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-0pky"><b>FullSubNet-aec</b><br/>Proposed model<br/>(In: 1, 2)</td>
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/FSN_FULL_DUAL/TEST_SET_FOR_HUMAN_ALIGNED00008__Cantoría__Teresica Hermana__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/FSN_FULL_DUAL/TEST_SET_FOR_HUMAN_ALIGNED00013__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/FSN_FULL_DUAL/TEST_SET_FOR_HUMAN_ALIGNED00016__Cantoría__Oy Comamos Y Bebamos__soprano.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/FSN_FULL_DUAL/TEST_SET_FOR_HUMAN_ALIGNED00019__Cantoría__Oy Comamos Y Bebamos__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/FSN_FULL_DUAL/TEST_SET_FOR_HUMAN_ALIGNED00020__Cantoría__Teresica Hermana__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/FSN_FULL_DUAL/TEST_SET_FOR_HUMAN_ALIGNED00025__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
           </tr>
           <tr>
             <td class="tg-0pky">Clean</td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/CLEAN/00008__Cantoría__Teresica Hermana__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/CLEAN/00013__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/CLEAN/00016__Cantoría__Oy Comamos Y Bebamos__soprano.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/CLEAN/00019__Cantoría__Oy Comamos Y Bebamos__tenor.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/CLEAN/00020__Cantoría__Teresica Hermana__alto.wav"></audio></td>
-            <td class="tg-ihkz"><audio controls="">
+            <td class="tg-ihkz"><audio id="player" controls="">
                 <source src="samples/LRM_ALIGNED/CLEAN/00025__Cantoría__Sus, sus, sus__alto.wav"></audio></td>
           </tr>
           
