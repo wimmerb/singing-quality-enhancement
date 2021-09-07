@@ -19,7 +19,29 @@ To get a first impression, please have a listen to these [examples](https://wimm
 ## Pretrained Models
 You can find pretrained models in the **[Experiments](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Experiments)** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
 
-# Dependencies
+# Prerequisites
+
+## Submodule initialization
+Please use the following instructions:
+```bash
+# Initialize all submodules
+git submodule update --init --recursive
+
+# Change branch to stay up-to-date
+cd SpeechEnhancers && git checkout main
+cd audio_zen && git checkout main
+```
+
+```bash
+# Do not forget to pull from time to time
+git pull --recurse-submodules
+
+# OR (pulls only submodules)
+git submodule update --remote
+```
+
+## Environment
+
 Please use the following instructions (conda installation required):
 
 ```bash
@@ -46,12 +68,65 @@ These file lists are then dynamically combined during training (the *training* s
 For detailed information on the training process, please refer to the "Methods for ..." chapters in [this thesis document](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-recordings.pdf). Before starting the training process, please make sure that you have the specified file path lists and properly precomputed validation (and optionally testing) datasets at hand.
 ## Denoising
 ### Training
+```bash
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn 
+
+# Start training
+python train.py -C denoise_fsn/train.toml -N 1
+# OR resume training
+python train.py -C denoise_fsn/train.toml -R -N 1
+```
+
 ### Evaluation
+```bash
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn
+
+# Evaluate the best model (Same as resuming and running validation only)
+python train.py -C denoise_fsn/train.toml -R -V -N 1
+```
 
 
 ## Leakage Removal
 ### Training
-### Evaluation.
+
+Example:
+
+```bash
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn 
+
+# Start training
+python train.py -C leakage_removal/fullsubnet_aec/train_BGM_full_dual.toml -N 1
+# OR resume training
+python train.py -C leakage_removal/fullsubnet_aec/train_BGM_full_dual.toml -R -N 1
+```
+### Evaluation
+
+Example:
+
+```bash
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn
+
+# Evaluate the best model (Same as resuming and running validation only)
+python train.py -C leakage_removal/fullsubnet_aec/train_BGM_full_dual.toml -R -V -N 1
+```
 
 # Inference
 You can find pretrained models in the **[Experiments](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Experiments)** folder. For each model, a readme file in its parent folder will give instructions on how to use it.
+
+Example usage:
+
+```bash
+# Go to directory for architecture-specific processing (inside recipes folder)
+cd SpeechEnhancers/recipes/thesis_experiments_fsn 
+
+# Enhance with given model and output paths
+python inference.py -C \ 
+denoise_fsn/inference.toml -M \ 
+../../../Experiments/Denoising/FullSubNet/denoise_FSN/checkpoints/best_model.tar \ 
+-O ../../../Experiments/Denoising/FullSubNet/denoise_FSN/inference \;
+
+# Abstract
