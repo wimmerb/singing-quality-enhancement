@@ -1,6 +1,3 @@
-[submodule "Wave-U-Net-for-Speech-Enhancement"]
-	path = Wave-U-Net-for-Speech-Enhancement
-	url = https://github.com/wimmerb/Wave-U-Net-for-Speech-Enhancement
 [submodule "FullSubNet"]
 	path = SpeechEnhancers
 	url = https://github.com/wimmerb/FullSubNet
