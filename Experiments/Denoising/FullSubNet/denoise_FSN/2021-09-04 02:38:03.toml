@@ -1,0 +1,39 @@
+[acoustics]
+sr = 16000
+n_fft = 512
+win_length = 512
+hop_length = 256
+
+[inferencer]
+path = "inferencer.Inferencer"
+type = "full_band_crm_mask"
+
+[dataset]
+path = "audio_zen.dataset.waveform_dataset_enhancement.WaveformDataset"
+
+[model]
+path = "denoise_fsn.model.Model"
+
+[inferencer.args]
+n_neighbor = 15
+
+[dataset.args]
+dataset = "/home/benedikt/thesis/TRAIN_EVALUATION_DATA/showcase_leakage/showcase_leakage.txt"
+limit = 300
+offset = 0
+sr = 16000
+sample_for_wave_u_net = false
+
+[model.args]
+sb_num_neighbors = 15
+fb_num_neighbors = 0
+num_freqs = 257
+look_ahead = 2
+sequence_model = "LSTM"
+fb_output_activate_function = "ReLU"
+sb_output_activate_function = false
+fb_model_hidden_size = 512
+sb_model_hidden_size = 384
+weight_init = false
+norm_type = "offline_laplace_norm"
+num_groups_in_drop_band = 2
