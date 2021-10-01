@@ -3,7 +3,7 @@
 
 [Thesis](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-recordings.pdf)
 
-This page is currently under construction.
+This page is currently under construction. Do not hesitate to contact me via e-mail if you have questions.
 
 # Abstract
 Singing enhancement aims to improve the perceived quality of a singing recording in various aspects. 
