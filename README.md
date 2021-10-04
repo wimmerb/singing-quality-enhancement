@@ -53,7 +53,7 @@ conda activate SING_QUAL_EN
 ```
 
 # Dataset Handling
-**Please have a look at the [Datasets](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Datasets) folder for preprocessing code and further information. A list of usefuul datasets is linked aswell.**
+**Please have a look at the [Datasets](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Datasets) folder for preprocessing code and further information. A list of useful datasets is linked aswell.**
 
 Note that, generally, raw audio file sources are handled via text files. These files contain lists with individual file paths. They are given to the training script and dynamically applied or used for precomputing datasets for validation and testing.
 ## Preprocessing Scripts
