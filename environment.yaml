@@ -216,4 +216,3 @@ dependencies:
     - toml==0.10.2
     - torch-complex==0.2.1
     - tqdm==4.61.0
-prefix: /home/benedikt/miniconda3/envs/FullSubNet
