@@ -1,0 +1,6 @@
+~/singing-quality-enhancement/samples_for_infer/DENOISE_PARALLEL/NOISY/f1_caro_straight_NOISE_257259_4286987-hq_c0.wav
+~/singing-quality-enhancement/samples_for_infer/DENOISE_PARALLEL/NOISY/f1_caro_vibrato_NOISE_ch14.wav
+~/singing-quality-enhancement/samples_for_infer/DENOISE_PARALLEL/NOISY/m1_dona_straight_NOISE_502455_9289659-hq_c1.wav
+~/singing-quality-enhancement/samples_for_infer/DENOISE_PARALLEL/NOISY/m3_row_spoken_NOISE_ch06.wav
+~/singing-quality-enhancement/samples_for_infer/DENOISE_PARALLEL/NOISY/m6_caro_straight_NOISE_EM32_403a_1_Noise_Fan_c19.wav
+~/singing-quality-enhancement/samples_for_infer/DENOISE_PARALLEL/NOISY/m7_caro_straight_NOISE_ch07.wav

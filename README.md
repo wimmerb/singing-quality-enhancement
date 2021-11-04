@@ -3,7 +3,7 @@
 
 [Thesis](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-recordings.pdf)
 
-This page is currently under construction.
+This page is currently under construction. Do not hesitate to contact me via e-mail if you have questions.
 
 # Abstract
 Singing enhancement aims to improve the perceived quality of a singing recording in various aspects. 
@@ -53,7 +53,7 @@ conda activate SING_QUAL_EN
 ```
 
 # Dataset Handling
-**Please have a look at the [Datasets](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Datasets) folder for preprocessing code and further information. A list of usefuul datasets is linked aswell.**
+**Please have a look at the [Datasets](https://github.com/wimmerb/singing-quality-enhancement/tree/master/Datasets) folder for preprocessing code and further information. A list of useful datasets is linked aswell.**
 
 Note that, generally, raw audio file sources are handled via text files. These files contain lists with individual file paths. They are given to the training script and dynamically applied or used for precomputing datasets for validation and testing.
 ## Preprocessing Scripts
@@ -124,9 +124,9 @@ Example usage:
 cd SpeechEnhancers/recipes/thesis_experiments_fsn 
 
 # Enhance with given model and output paths
-python inference.py -C \ 
-denoise_fsn/inference.toml -M \ 
-../../../Experiments/Denoising/FullSubNet/denoise_FSN/checkpoints/best_model.tar \ 
--O ../../../Experiments/Denoising/FullSubNet/denoise_FSN/inference \;
+python inference.py \
+  -C denoise_fsn/inference.toml \
+  -M ../../../Experiments/Denoising/FullSubNet/denoise_FSN/checkpoints/best_model.tar \
+  -O ../../../Experiments/Denoising/FullSubNet/denoise_FSN/inference
 
 # Abstract
