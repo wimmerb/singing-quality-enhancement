@@ -45,11 +45,23 @@ git submodule update --remote
 Please use the following instructions (conda installation required):
 
 ```bash
-# Install conda environment and python packages
-conda env create -f environment.yaml
-
-# Activate conda environment
+# create a conda environment
+conda create --name SING_QUAL_EN python=3
 conda activate SING_QUAL_EN
+
+# install conda packages
+# ensure python=3.x, pytorch=1.10.x, torchaudio=0.10
+# (Optional) remove cudatoolkit dependency if you only want inference on CPU
+conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+# (Optional) ignore this line if you only need inference
+conda install tensorboard joblib matplotlib
+
+# install pip packages
+pip install Cython
+pip install librosa pandas pesq pypesq pystoi tqdm toml mir_eval torch_complex rich
+
+# (Optional) if there are "mp3" format audio files in your dataset, you need to install ffmpeg.
+conda install -c conda-forge ffmpeg
 ```
 
 # Dataset Handling
