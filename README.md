@@ -1,7 +1,7 @@
 # Quality Enhancement of Overdub Singing Voice Recordings
 [Audio Examples](https://wimmerb.github.io/singing-quality-enhancement/)
 
-[Thesis](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-recordings.pdf)
+[Thesis](https://github.com/wimmerb/singing-quality-enhancement/blob/master/quality-enhancement-of-overdub-singing-voice-recordings.pdf)
 
 This page is currently under construction. Do not hesitate to contact me via e-mail if you have questions.
 
